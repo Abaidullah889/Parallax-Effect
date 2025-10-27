@@ -1,0 +1,86 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background: #030303;
+  color: white;
+  overflow-x: hidden;
+}
+
+.hero {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  background: linear-gradient(to bottom, transparent 40%, rgba(0, 0, 0, 0.9) 70%, #020202),
+              url("https://i.imgur.com/9KVO1Ok.jpg") center/cover no-repeat;
+}
+
+.hero h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Gruppo', cursive;
+  font-size: 3rem;
+  text-transform: uppercase;
+  letter-spacing: 0.4rem;
+  text-shadow: 2px 2px 8px black;
+  z-index: 10;
+}
+
+.layer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  top: 0;
+  left: 0;
+  will-change: transform;
+}
+
+.layer-1 {
+  background-image: url("https://i.imgur.com/bwEm8WB.png");
+  z-index: 3;
+}
+
+.layer-2 {
+  background-image: url("https://i.imgur.com/XxTPjmC.png");
+  z-index: 4;
+}
+
+.layer-3 {
+  background-image: url("https://i.imgur.com/F4xnzjU.png");
+  z-index: 5;
+}
+
+.content {
+  background: url("https://images.pexels.com/photos/998641/pexels-photo-998641.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500") center/cover fixed;
+  padding: 6rem 15vw;
+  line-height: 1.7;
+  font-size: 1.2rem;
+  position: relative;
+  min-height: 150vh;
+}
+
+.text {
+  max-width: 700px;
+}
+
+.rock {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  z-index: 10;
+  will-change: transform;
+}
+
+.rock-1 { left: 10%; bottom: 10%; }
+.rock-2 { left: 25%; bottom: 20%; transform: scaleX(-1); }
+.rock-3 { left: 40%; bottom: 5%; }
+.rock-4 { left: 60%; bottom: 15%; transform: scaleX(-1); }
+
