@@ -1,86 +1,172 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-  font-family: "Open Sans", sans-serif;
-  background: #030303;
-  color: white;
-  overflow-x: hidden;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    background: #000000;
+    color: white;
+    overflow-x: hidden;
 }
 
-.hero {
-  position: relative;
-  height: 100vh;
-  overflow: hidden;
-  background: linear-gradient(to bottom, transparent 40%, rgba(0, 0, 0, 0.9) 70%, #020202),
-              url("https://i.imgur.com/9KVO1Ok.jpg") center/cover no-repeat;
+.background {
+    background-image: linear-gradient(to bottom, transparent 40%, rgba(0,0,20,0.95) 70%, #000010), 
+                      url("https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?w=1920");
+    width: 100vw;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    z-index: 1;
+    position: relative;
+    box-shadow: 0 50px 100px rgba(0,0,0,0.9);
 }
 
-.hero h1 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-family: 'Gruppo', cursive;
-  font-size: 3rem;
-  text-transform: uppercase;
-  letter-spacing: 0.4rem;
-  text-shadow: 2px 2px 8px black;
-  z-index: 10;
+h1 {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    z-index: 100;
+    font-family: 'Orbitron', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1rem;
+    font-size: 4rem;
+    color: white;
+    text-shadow: 0 0 20px rgba(100,200,255,0.8), 0 0 40px rgba(100,200,255,0.4);
+    font-weight: 900;
 }
 
 .layer {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-position: center;
-  background-size: cover;
-  top: 0;
-  left: 0;
-  will-change: transform;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .layer-1 {
-  background-image: url("https://i.imgur.com/bwEm8WB.png");
-  z-index: 3;
+    background-image: linear-gradient(to bottom, transparent 50%, rgba(0, 0, 20, 0.85) 70%, #000010), 
+                      url("https://images.unsplash.com/photo-1462331940025-496dfbfc7564?w=1920");
+    z-index: 70;
 }
 
-.layer-2 {
-  background-image: url("https://i.imgur.com/XxTPjmC.png");
-  z-index: 4;
-}
-
-.layer-3 {
-  background-image: url("https://i.imgur.com/F4xnzjU.png");
-  z-index: 5;
-}
 
 .content {
-  background: url("https://images.pexels.com/photos/998641/pexels-photo-998641.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500") center/cover fixed;
-  padding: 6rem 15vw;
-  line-height: 1.7;
-  font-size: 1.2rem;
-  position: relative;
-  min-height: 150vh;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    position: relative;
+    background: linear-gradient(180deg, #000010 0%, #001030 50%, #000510 100%);
+    min-height: 150vh;
 }
 
 .text {
-  max-width: 700px;
+    padding: 6rem 8rem 25rem 8rem;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.rock {
-  position: absolute;
-  width: 120px;
-  height: 120px;
-  z-index: 10;
-  will-change: transform;
+.text h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #64c8ff;
+    text-shadow: 0 0 10px rgba(100,200,255,0.5);
 }
 
-.rock-1 { left: 10%; bottom: 10%; }
-.rock-2 { left: 25%; bottom: 20%; transform: scaleX(-1); }
-.rock-3 { left: 40%; bottom: 5%; }
-.rock-4 { left: 60%; bottom: 15%; transform: scaleX(-1); }
+.text p {
+    margin-bottom: 1.5rem;
+    text-align: justify;
+}
 
+.floating-element {
+    position: absolute;
+    z-index: 1000;
+    opacity: 0.9;
+}
+
+.planet {
+    border-radius: 50%;
+    box-shadow: 0 0 30px rgba(100,200,255,0.3);
+}
+
+.planet-1 {
+    width: 150px;
+    height: 150px;
+    left: 5%;
+    top: 40%;
+    background: radial-gradient(circle at 30% 30%, #ff6b6b, #c92a2a);
+}
+
+.planet-2 {
+    width: 200px;
+    height: 200px;
+    right: 2%;
+    top: 25%;
+    background: radial-gradient(circle at 30% 30%, #ffd93d, #f39c12);
+}
+
+.planet-3 {
+    width: 100px;
+    height: 100px;
+    left: 5%;
+    bottom: 5%;
+    background: radial-gradient(circle at 30% 30%, #6c5ce7, #a29bfe);
+}
+
+.planet-4 {
+    width: 120px;
+    height: 120px;
+    right: 2%;
+    bottom: 78%;
+    background: radial-gradient(circle at 30% 30%, #00cec9, #0984e3);
+}
+
+.star {
+    width: 4px;
+    height: 4px;
+    background: white;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(255,255,255,0.8);
+}
+
+.star-1 { left: 5%; top: 15%; }
+.star-2 { left: 3%; top: 45%; }
+.star-3 { right: 4%; top: 35%; }
+.star-4 { right: 6%; top: 60%; }
+.star-5 { left: 7%; top: 30%; }
+.star-6 { right: 5%; bottom: 10%; }
+.star-7 { left: 4%; bottom: 15%; }
+.star-8 { right: 7%; bottom: 20%; }
+
+.asteroid {
+    width: 60px;
+    height: 60px;
+    background: #555;
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    box-shadow: inset -10px -10px 20px rgba(0,0,0,0.5);
+}
+
+.asteroid-1 {
+    left: 3%;
+    top: 55%;
+}
+
+.asteroid-2 {
+    right: 4%;
+    top: 70%;
+    width: 80px;
+    height: 80px;
+}
+
+.asteroid-3 {
+    left: 6%;
+    bottom: 82%;
+    width: 50px;
+    height: 50px;
+}
